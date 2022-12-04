@@ -369,10 +369,10 @@ header {
 }
 
 .input-form input {
-  margin: 0.5rem;
+  margin: 1rem;
   line-height: 3rem;
   padding: 0 0.25rem;
-  width: 20vw;
+  width: 24vw;
 }
 .input-form .expense-list-item, .input-form .income-list-item {
   display: flex;
@@ -388,4 +388,10 @@ header {
 }
 .input-form .total-section {
   margin: 4rem auto;
+}
+
+.legal p {
+  margin: 10rem auto 0 auto;
+  font-size: 0.75rem;
+  text-align: center;
 }

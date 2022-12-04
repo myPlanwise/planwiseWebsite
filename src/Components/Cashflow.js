@@ -235,6 +235,11 @@ useEffect(() => {
           <p>{totalIncomePercentage}%</p>
         </div> */}
       </div>
+      <div className="legal">
+        <p>
+          This app is for educational purposes only. This app is not responsible for any financial decisions made or losses incurred by the user. Please consult a financial advisor to learn more.
+        </p>
+      </div>
     </div>
   );
 }

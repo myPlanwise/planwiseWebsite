@@ -1,0 +1,1 @@
+//this component is used to calculate the net worth of the user. Assets and liabilities are added and subtracted to get the net worth.

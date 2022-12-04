@@ -12,10 +12,10 @@
 
 .input-form {
   input {
-    margin: .5rem;
+    margin: 1rem;
     line-height: 3rem;
     padding: 0 .25rem;
-    width: 20vw;
+    width: 24vw;
   }
   .expense-list-item, .income-list-item {
     display: flex;
@@ -32,4 +32,10 @@
   .total-section {
     margin: 4rem auto;
   }
+}
+
+.legal p {
+  margin: 10rem auto 0 auto;
+  font-size: .75rem;
+  text-align: center;
 }
