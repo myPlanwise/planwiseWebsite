@@ -18,14 +18,14 @@ const Nav = () => {
             <li className="home">
               <NavLink to="/">Home</NavLink>
             </li>
-            {/* <li className="about">
+            <li className="about">
               <NavLink to="/about">About</NavLink>
             </li>
             <li className="tools">
-              <NavLink to="/tools"></NavLink>
+              <NavLink to="/main">Tools</NavLink>
             </li>
-            <li className="login">
-              <NavLink to="/login"></NavLink>
+            {/* <li className="login">
+              <NavLink to="/login">Login</NavLink>
             </li> */}
             {/* <li className="contact">
               <NavLink to="/contact">Contact</NavLink>
