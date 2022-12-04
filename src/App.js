@@ -35,7 +35,7 @@ function App() {
   }, [theme]);
 
   return (
-    <div className="App wrapper">
+    <div className="App">
       <Nav toggleTheme={toggleTheme} theme={theme}/>
       <RoutesComp />
       <Footer />

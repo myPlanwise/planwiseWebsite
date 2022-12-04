@@ -4,28 +4,20 @@
 // import logo from assets
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.jpeg";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 
 const Nav = ({ toggleTheme, theme }) => {
-  const [showMenu, setShowMenu] = useState(false);
+  // const [showMenu, setShowMenu] = useState(false);
   const menuRef = useRef();
 
-  if (showMenu) {
-    document.body.style.overflow = "hidden";
-    // document.querySelector(".slideOutNav").style.right = "0";
-    menuRef.current.style.right = "0";
-  } else {
-    document.body.style.overflow = "unset";
-    // document.querySelector(".slideOutNav").style.right = "-200vw";
-    menuRef.current.style.right = "-200vw";
-  }
-
   const handleOpen = () => {
-    setShowMenu(!showMenu);
+    menuRef.current.style.right = "0";
+        document.body.style.overflow = "hidden";
   };
 
   const handleClose = () => {
-    setShowMenu(false);
+    menuRef.current.style.right = "-200vw";
+        document.body.style.overflow = "unset";
   };
 
 
@@ -49,7 +41,7 @@ const Nav = ({ toggleTheme, theme }) => {
             </li>
           </ul>
       </div>
-        <div className="slideOutNav" ref={menuRef}>
+        <div className="slideOutNav" ref={menuRef} style={{right:"-200vw"}}>
             <ul className="navLinks">
               <li className="xIcon" onClick={handleClose}>
                 <i className="fa-solid fa-xmark"></i>
