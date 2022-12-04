@@ -26,9 +26,8 @@ a {
   color: $primary-color;
   &:hover,
   &:focus {
-    color: $secondary-color;
+    color: $black;
     transition: ease-in-out 0.3s;
-    font-weight: bold;
   }
 }
 
