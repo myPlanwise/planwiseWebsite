@@ -79,15 +79,15 @@ const InputForm = () => {
 const [totalExpense, setTotalExpense] = useState(0);
 const [totalIncome, setTotalIncome] = useState(0);
 const [totalDifference, setTotalDifference] = useState(0);
-const [totalExpensePercentage, setTotalExpensePercentage] = useState(0);
-const [totalIncomePercentage, setTotalIncomePercentage] = useState(0);
+// const [totalExpensePercentage, setTotalExpensePercentage] = useState(0);
+// const [totalIncomePercentage, setTotalIncomePercentage] = useState(0);
 
 useEffect(() => {
   let expenseTotal = 0;
   let incomeTotal = 0;
   let differenceTotal = 0;
-  let expensePercentageTotal = 0;
-  let incomePercentageTotal = 0;
+  // let expensePercentageTotal = 0;
+  // let incomePercentageTotal = 0;
 
   expenseList.forEach((expense) => {
     expenseTotal += parseInt(expense.expenseAmount);
@@ -102,11 +102,11 @@ useEffect(() => {
   differenceTotal = incomeTotal - expenseTotal;
   setTotalDifference(differenceTotal);
 
-  expensePercentageTotal = (expenseTotal / incomeTotal) * 100;
-  setTotalExpensePercentage(expensePercentageTotal.toFixed(2));
+  // expensePercentageTotal = (expenseTotal / incomeTotal) * 100;
+  // setTotalExpensePercentage(expensePercentageTotal.toFixed(2));
 
-  incomePercentageTotal = (incomeTotal / expenseTotal) * 100;
-  setTotalIncomePercentage(incomePercentageTotal.toFixed(2));
+  // incomePercentageTotal = (incomeTotal / expenseTotal) * 100;
+  // setTotalIncomePercentage(incomePercentageTotal.toFixed(2));
 }, [expenseList, incomeList]);
 
   // create a function to delete an expense

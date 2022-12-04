@@ -240,12 +240,11 @@ li {
 
 a {
   text-decoration: none;
-  color: rgba(4, 25, 157, 0.685);
+  color: rgba(2, 85, 45, 0.685);
 }
 a:hover, a:focus {
-  color: rgb(0, 118, 0);
+  color: #333;
   transition: ease-in-out 0.3s;
-  font-weight: bold;
 }
 
 button {
