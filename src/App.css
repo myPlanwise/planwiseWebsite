@@ -307,6 +307,7 @@ footer {
   left: 0;
   z-index: 20;
   transition: 0.75s;
+  border: 1px solid rgb(4, 0, 255);
 }
 .slideOutNav a,
 .slideOutNav i {
