@@ -103,10 +103,10 @@ useEffect(() => {
   setTotalDifference(differenceTotal);
 
   expensePercentageTotal = (expenseTotal / incomeTotal) * 100;
-  setTotalExpensePercentage(expensePercentageTotal);
+  setTotalExpensePercentage(expensePercentageTotal.toFixed(2));
 
   incomePercentageTotal = (incomeTotal / expenseTotal) * 100;
-  setTotalIncomePercentage(incomePercentageTotal);
+  setTotalIncomePercentage(incomePercentageTotal.toFixed(2));
 }, [expenseList, incomeList]);
 
   // create a function to delete an expense
@@ -137,6 +137,7 @@ useEffect(() => {
               placeholder="Expense Name"
               value={input.expenseName}
               onChange={handleInput}
+              required
             />
             <input
               type="number"
@@ -144,6 +145,7 @@ useEffect(() => {
               placeholder="Expense Amount"
               value={input.expenseAmount}
               onChange={handleInput}
+              required
             />
             <button type="submit">Add Expense</button>
           </form>
@@ -152,7 +154,7 @@ useEffect(() => {
               return (
                 <div className="expense-list-item" key={index}>
                   <p>{expense.expenseName}</p>
-                  <p>${expense.expenseAmount}</p>
+                  <p className="currency">${expense.expenseAmount}</p>
                   <button onClick={() => deleteExpense(index)}>X</button>
                 </div>
               );
@@ -169,6 +171,7 @@ useEffect(() => {
               placeholder="Income Name"
               value={input.incomeName}
               onChange={handleInput}
+              required
             />
             <input
               type="number"
@@ -176,6 +179,7 @@ useEffect(() => {
               placeholder="Income Amount"
               value={input.incomeAmount}
               onChange={handleInput}
+              required
             />
             <button type="submit">Add Income</button>
           </form>
@@ -184,7 +188,7 @@ useEffect(() => {
               return (
                 <div className="income-list-item" key={index}>
                   <p>{income.incomeName}</p>
-                  <p>${income.incomeAmount}</p>
+                  <p className="currency">${income.incomeAmount}</p>
                   <button onClick={() => deleteIncome(index)}>X</button>
                 </div>
               );
@@ -193,27 +197,29 @@ useEffect(() => {
           </div>
         </div>
       </div>
+      {/* 
+// TODO: create a pill bar that displays the total expense amount, total income amount, total difference between the total expense and total income, total percentage of the total expense compared to the total income, total percentage of the total income compared to the total expense */}
       <div className="total-section">
         <div className="total-expense">
           <h2>Total Expenses</h2>
-          <p>${totalExpense}</p>
+          <p className="currency">${totalExpense}</p>
         </div>
         <div className="total-income">
           <h2>Total Income</h2>
-          <p>${totalIncome}</p>
+          <p className="currency">${totalIncome}</p>
         </div>
         <div className="total-difference">
-          <h2>Difference</h2>
-          <p>${totalDifference}</p>
+          <h2>Total Cashflow</h2>
+          <p className="currency">${totalDifference}</p>
         </div>
-        <div className="total-expense-percentage">
+        {/* <div className="total-expense-percentage">
           <h2>Expense Percentage</h2>
           <p>{totalExpensePercentage}%</p>
         </div>
         <div className="total-income-percentage">
           <h2>Income Percentage</h2>
           <p>{totalIncomePercentage}%</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
