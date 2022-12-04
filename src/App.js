@@ -35,11 +35,11 @@ function App() {
   }, [theme]);
 
   return (
-    <body className="App wrapper">
+    <div className="App wrapper">
       <Nav toggleTheme={toggleTheme} theme={theme}/>
       <RoutesComp />
       <Footer />
-    </body>
+    </div>
   );
 }
 
