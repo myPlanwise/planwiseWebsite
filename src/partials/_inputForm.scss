@@ -1,0 +1,32 @@
+@use "./variables" as *;
+
+.total-section {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.currency {
+  text-align: right;
+}
+
+.input-form {
+  input {
+    margin: .5rem;
+    line-height: 3rem;
+    padding: 0 .25rem;
+    width: 25vw;
+  }
+  .expense-list-item, .income-list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    p {
+      width: 33%;
+    }
+  }
+}

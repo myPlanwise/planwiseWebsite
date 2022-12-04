@@ -1,0 +1,56 @@
+@use "./variables" as *;
+
+.App {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-size: 125%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: $font-family;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: $black;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+  &:hover,
+  &:focus {
+    color: $secondary-color;
+    transition: ease-in-out 0.3s;
+    font-weight: bold;
+  }
+}
+
+button {
+  line-height: 1.5;
+  color: $black;
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background: $black;
+    color: $white;
+    transition: ease-in-out 0.3s;
+  }
+}
+
+
+footer {
+  font-size: 1rem;
+  text-align: center;
+  margin: 2rem auto;
+}
