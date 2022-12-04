@@ -4,20 +4,39 @@
 // import { Routes, Route } from "react-router-dom";
 // TODO: Add light/dark mode
 
+import { useEffect, useState } from 'react';
 import RoutesComp from './Components/RoutesComp';
 import Nav from './Components/Nav';
 import Footer from './Components/Footer';
 
 import './App.css';
 
-//localstorage uid for backend
-// user will visit site, the browser will check if there is a uid in localstorage and if there is, it will send it to the backend to check if it is a valid uid then the backend will send back the user data and the frontend will store it in state and display it on the page
-// budget income and expenses will be stored in state and sent to the backend to be stored in the database
+const getStorageTheme = () => {
+  let theme = 'light-theme';
+  if (localStorage.getItem('theme')) {
+    theme = localStorage.getItem('theme');
+  }
+  return theme;
+};
 
 function App() {
+
+  const [theme, setTheme] = useState(getStorageTheme());
+  const toggleTheme = () => {
+    if (theme === 'light-theme') {
+      setTheme('dark-theme');
+    } else {
+      setTheme('light-theme');
+    }
+  };
+  useEffect(() => {
+    document.documentElement.className = theme;
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
   return (
     <body className="App wrapper">
-      <Nav />
+      <Nav toggleTheme={toggleTheme} theme={theme}/>
       <RoutesComp />
       <Footer />
     </body>

@@ -240,10 +240,10 @@ li {
 
 a {
   text-decoration: none;
-  color: rgba(2, 85, 45, 0.685);
+  color: rgb(4, 0, 255);
 }
 a:hover, a:focus {
-  color: #333;
+  color: rgb(44, 208, 74);
   transition: ease-in-out 0.3s;
 }
 
@@ -265,14 +265,90 @@ button:hover, button:focus {
 footer {
   font-size: 1rem;
   text-align: center;
-  margin: 2rem auto;
+  margin: 8rem auto 2rem auto;
 }
 
-.desktopNav {
+.navigation {
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  width: 90%;
+  margin: 4rem 0;
+}
+
+.menuContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 20%;
+}
+.menuContainer li {
+  margin-right: 30px;
+}
+
+.logo img {
+  border-radius: 50%;
+}
+
+.slideOutNav {
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  transition: 0.75s;
+}
+.slideOutNav a,
+.slideOutNav i {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 1.5rem 0;
+  transition: 0.25s;
+}
+.slideOutNav a:hover, .slideOutNav a:focus,
+.slideOutNav i:hover,
+.slideOutNav i:focus {
+  color: rgb(44, 208, 74);
+}
+.slideOutNav i {
+  font-size: 2rem;
+  margin-left: 8rem;
+}
+.slideOutNav li {
+  padding: 0.5rem;
+}
+
+.dark-theme body {
+  background-color: #333;
+  color: #fff;
+}
+.dark-theme button {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.dark-theme button:hover, .dark-theme button:focus {
+  background-color: #fff;
+  color: #333;
+  transition: ease-in-out 0.25s;
+}
+.dark-theme a {
+  color: rgb(44, 208, 74);
+}
+.dark-theme a:hover, .dark-theme a:focus {
+  color: #fff;
+  transition: ease-in-out 0.25s;
 }
 
 header {
@@ -295,7 +371,7 @@ header {
   margin: 0.5rem;
   line-height: 3rem;
   padding: 0 0.25rem;
-  width: 25vw;
+  width: 20vw;
 }
 .input-form .expense-list-item, .input-form .income-list-item {
   display: flex;
@@ -308,4 +384,7 @@ header {
 }
 .input-form .expense-list-item p, .input-form .income-list-item p {
   width: 33%;
+}
+.input-form .total-section {
+  margin: 4rem auto;
 }

@@ -1,6 +1,87 @@
-.desktopNav {
+@use "./variables" as *;
+
+.navigation {
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  width: 90%;
+  margin: 4rem 0;
+}
+
+.menuContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 20%;
+  li {
+    margin-right: 30px;
+  }
+}
+
+.logo img {
+  border-radius: 50%;
+}
+
+.slideOutNav {
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  background-color: $black;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  transition: 0.75s;
+  a,
+  i {
+    color: $white;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 1.5rem 0;
+    transition: 0.25s;
+    &:hover,
+    &:focus {
+      color: $secondary-color;
+    }
+  }
+  i {
+    font-size: 2rem;
+    margin-left: 8rem;
+  }
+  li {
+    padding: .5rem;
+  }
+}
+
+.dark-theme {
+  body {
+    background-color: $black;
+    color: $white;
+  }
+  button {
+    background-color: $black;
+    color: $white;
+    border: 1px solid $white;
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $black;
+      transition: ease-in-out 0.25s;
+    }
+  }
+  a {
+    color: $secondary-color;
+    &:hover,
+    &:focus {
+      color: $white;
+      transition: ease-in-out 0.25s;
+    }
+  }
 }
