@@ -23,5 +23,4 @@ This budget calculator is a simple tool to help you keep track of your spending.
 ## Developer Notes
 * React
   - custom hooks, context, utils, components, useState
-* React-Bootstrap
 * uuid 
