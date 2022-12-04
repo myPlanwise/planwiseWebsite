@@ -1,12 +1,12 @@
 // main will contain Input, Budget Results and ToDo List
-import InputForm from "./InputForm";
+import Cashflow from "./Cashflow";
 // import ToDoList from "./ToDoList";
 
 
 const Main = () => {
   return (
     <main>
-      <InputForm />
+      <Cashflow />
       {/* <ToDoList /> */}
     </main>
   )

@@ -10,7 +10,7 @@
 // TODO: create a custom hook to handle the input form for expenses and income
 import { useEffect, useState } from "react";
 
-const InputForm = () => {
+const Cashflow = () => {
 
 
   // const uid = () => {
@@ -239,4 +239,4 @@ useEffect(() => {
   );
 }
 
-export default InputForm;
+export default Cashflow;
