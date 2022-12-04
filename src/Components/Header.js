@@ -1,14 +1,26 @@
 // Header will contain the welcome message and get started button
 
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <header>
       <div className="contentContainer">
-        <h1>Welcome to myPlanwise</h1>
-        <p>myPlanwise is under construction. We are working on exciting initiatives to help you plan your future.</p>
+        <h1>Welcome to Planwise</h1>
+        <p>🚧 Under Construction 🚧</p> 
+        <p>We are working on exciting initiatives to help you plan your future.</p>
         <p>If you have suggestions or would like to get in touch, email us at hello@myplanwise.com.</p>
       </div>
-      {/* <button>Get Started</button> */}
+      {/* get started button will render the input form */}
+      <div className="getStarted">
+        <Link to="/main">
+          <button>Get Started</button>
+        </Link>
+        {/* Link button to login */}
+        {/* <Link to="/login">
+          <button>Login</button>
+        </Link> */}
+      </div>
     </header>
   )
 }
