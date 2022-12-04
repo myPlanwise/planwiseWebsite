@@ -8,10 +8,24 @@
 // the input will be saved in the database to be used in the budget results component
 
 // TODO: create a custom hook to handle the input form for expenses and income
-
 import { useEffect, useState } from "react";
 
 const InputForm = () => {
+
+
+  // const uid = () => {
+  //   return `uid-${Date.now().toString(36)}${Math.random().toString(36).substring(2)}`;
+  // };
+
+  // const [userId, setUserId] = useState(localStorage.getItem("userId"));
+  // useEffect(() => {
+  //   if (!localStorage.getItem("userId")) {
+  //     const userId = uid();
+  //     localStorage.setItem("userId", userId);
+  //   }
+  //   setUserId(localStorage.getItem("userId"));
+  // }, []);
+
   // create state for the input form
   const [input, setInput] = useState({
     expenseName: "",
@@ -155,7 +169,7 @@ useEffect(() => {
                 <div className="expense-list-item" key={index}>
                   <p>{expense.expenseName}</p>
                   <p className="currency">${expense.expenseAmount}</p>
-                  <button onClick={() => deleteExpense(index)}>X</button>
+                  <button onClick={() => deleteExpense(index)}><i className="fa-solid fa-xmark"></i></button>
                 </div>
               );
             }
@@ -189,7 +203,7 @@ useEffect(() => {
                 <div className="income-list-item" key={index}>
                   <p>{income.incomeName}</p>
                   <p className="currency">${income.incomeAmount}</p>
-                  <button onClick={() => deleteIncome(index)}>X</button>
+                  <button onClick={() => deleteIncome(index)}><i className="fa-solid fa-xmark"></i></button>
                 </div>
               );
             }

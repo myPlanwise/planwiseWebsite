@@ -9,7 +9,6 @@ const Header = () => {
         <h1>Welcome to Planwise</h1>
         <p>🚧 Under Construction 🚧</p> 
         <p>We are working on exciting initiatives to help you plan your future.</p>
-        <p>If you have suggestions or would like to get in touch, email us at hello@myplanwise.com.</p>
       </div>
       {/* get started button will render the input form */}
       <div className="getStarted">

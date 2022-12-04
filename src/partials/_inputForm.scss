@@ -15,7 +15,7 @@
     margin: .5rem;
     line-height: 3rem;
     padding: 0 .25rem;
-    width: 25vw;
+    width: 20vw;
   }
   .expense-list-item, .income-list-item {
     display: flex;
@@ -28,5 +28,8 @@
     p {
       width: 33%;
     }
+  }
+  .total-section {
+    margin: 4rem auto;
   }
 }
